@@ -3,9 +3,76 @@
 
 <head>
 	<title>Pikethorne's Creator Space</title>
+	
+	<script>
+	var KofiLink = "https://ko-fi.com/pikethorne";
+	var TwitterLink = "https://twitter.com/pikethorn";
+	var TumblrLink = "https://pikethorne.tumblr.com";
+	var BlueSkyLink = "https://bsky.app/profile/pikethorne.bsky.social";
+	
+	function OpenLink(linkVar)
+	{
+		document.location.href = linkVar;
+	}
+	
+	</script>
+	
+	<style>
+	body
+	{
+		background-color: #100812;
+		color: #E0E0A0;
+		text-align: center;
+	}
+	
+	section.main
+	{
+		position: absolute;
+		background-color: #300812;
+		min-width: 60%;
+		max-width: 80%;
+		left:15%;
+		right:15%;
+		top: 15px;
+		bottom: 15px;
+	}
+	
+	section.link
+	{
+	
+	}
+	
+	hr
+	{
+		border-style: dotted none none none;
+		border-color: #FFB050;
+		border-width: 3px;
+	}
+	</style>
 </head>
 
 <body>
-	index
+	<section class="main">
+	
+	<h1>Pikethorne</h1>
+	<h3>Artist and Software Developer</h3>
+	
+	<hr>
+	
+	<section class = "link">
+	<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
+	<button type="button" onclick="OpenLink(TwitterLink)">TwitterLink</button>
+	<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
+	<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
+	</section>
+	
+	<h2>Profile</h2>
+	<p>Florida-born, Illinois-based independent artist and game developer. Commissioned art available in traditional ink/watercolor or digital pixel art.</p>
+	
+	<hr>
+	
+	<h2>Art</h2>
+	</section>
+	
 </body>
 </html>
