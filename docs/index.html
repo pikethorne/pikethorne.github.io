@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Pikethorne's Creator Space</title>
+	<title>Pikethorne"s Creator Space</title>
 	
 	<script>
 	var KofiLink = "https://ko-fi.com/pikethorne";
@@ -18,28 +18,36 @@
 	</script>
 	
 	<style>
-	body
-	{
-		background-color: #100812;
-		color: #E0E0A0;
-		text-align: center;
+	
+	:root{
+		--bodyColor: #E0E0C0;
+		--headerColor: #E0D0A0;
+		
+		--bgColor: #100812;
 	}
 	
-	section.main
+	h1
 	{
-		position: absolute;
-		background-color: #300812;
-		min-width: 60%;
-		max-width: 80%;
-		left:15%;
-		right:15%;
-		top: 15px;
-		bottom: 15px;
+		color: var(--headerColor);
+		font: 60px Georgia, Serif;
+		margin-top: 0px;
+		margin-bottom: 0px;
 	}
 	
-	section.link
+	h2
 	{
+		color: var(--headerColor);
+		font: 45px Garamond, Serif;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
 	
+	h3
+	{
+		color: var(--headerColor);
+		font: 30px Garamond, Serif;
+		margin-top: 0px;
+		margin-bottom: 0px;
 	}
 	
 	hr
@@ -48,31 +56,91 @@
 		border-color: #FFB050;
 		border-width: 3px;
 	}
+	
+	body
+	{
+		color: var(--bodyColor);
+		background-color: var(--bgColor);
+		text-align: center;
+		font: 20px Verdana, Sans-Serif;
+	}
+	
+	.wrapper
+	{
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		display: grid;
+		grid-template-rows: 20px auto 20px;
+		grid-template-columns: 10% auto auto 10%;
+		grid-template-areas: 
+			"header header header header"
+			"leftSpace main main rightSpace"
+			"footer footer footer footer";
+	}
+	
+	.wrapper > .main
+	{
+		grid-area: main;
+		background-color: #300812;
+		border-radius: 25px
+	}
+	
+	.wrapper > .header
+	{
+		grid-area: header;
+	}
+	
+	.wrapper > .leftSpace
+	{
+		grid-area: leftSpace;
+	}
+	
+	.wrapper > .rightSpace
+	{
+		grid-area: rightSpace;
+	}
+	
+	.wrapper > .footer
+	{
+		grid-area: footer;
+	}
+	
 	</style>
 </head>
 
 <body>
-	<section class="main">
 	
-	<h1>Pikethorne</h1>
-	<h3>Artist and Software Developer</h3>
-	
-	<hr>
-	
-	<section class = "link">
-	<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
-	<button type="button" onclick="OpenLink(TwitterLink)">TwitterLink</button>
-	<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
-	<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
-	</section>
-	
-	<h2>Profile</h2>
-	<p>Florida-born, Illinois-based independent artist and game developer. Commissioned art available in traditional ink/watercolor or digital pixel art.</p>
-	
-	<hr>
-	
-	<h2>Art</h2>
-	</section>
-	
+	<div class="wrapper">
+		
+		<section class = "header"></section>
+		
+		<section class="main">
+			<h1>Pikethorne</h1>
+			<h3>Artist and Software Engineer</h3>
+			
+			<hr>
+			
+			<h2>Profile</h2>
+			<p>Florida-born, Illinois-based independent artist and game developer. Commissioned art available in traditional ink/watercolor or digital pixel art.</p>
+			
+			<hr>
+			
+			<h2>Art</h2>
+		</section>
+		
+		<section class="leftSpace"></section>
+		<section class="rightSpace"></section>
+		
+		<section class = "footer">
+			<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
+			<button type="button" onclick="OpenLink(TwitterLink)">TwitterLink</button>
+			<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
+			<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
+		</section>
+		
+	</div>
 </body>
 </html>
