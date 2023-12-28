@@ -22,6 +22,8 @@
 	:root{
 		--bodyColor: #E0E0C0;
 		--headerColor: #E0D0A0;
+		--mainColor: #301822;
+		--socialsBannerColor: #200812;
 		
 		--bgColor: #100812;
 	}
@@ -39,7 +41,7 @@
 		color: var(--headerColor);
 		font: 45px Garamond, Serif;
 		margin-top: 0px;
-		margin-bottom: 0px;
+		margin-bottom: 10px;
 	}
 	
 	h3
@@ -47,7 +49,7 @@
 		color: var(--headerColor);
 		font: 30px Garamond, Serif;
 		margin-top: 0px;
-		margin-bottom: 0px;
+		margin-bottom: 10px;
 	}
 	
 	hr
@@ -55,6 +57,7 @@
 		border-style: dotted none none none;
 		border-color: #FFB050;
 		border-width: 3px;
+		max-width: 20%;
 	}
 	
 	body
@@ -84,7 +87,7 @@
 	.wrapper > .main
 	{
 		grid-area: main;
-		background-color: #300812;
+		background-color: var(--mainColor);
 		border-radius: 25px
 	}
 	
@@ -106,6 +109,30 @@
 	.wrapper > .footer
 	{
 		grid-area: footer;
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 0;
+	}
+	
+	.logoIcon
+	{
+		image-rendering: pixelated;
+		height:256px;
+		width:auto;
+		border-radius: 50%;
+		margin: 15px;
+	}
+	
+	.socialsButtonBanner
+	{
+		background-color: var(--socialsBannerColor);
+	}
+	
+	.socialsButtonBanner > a > img {
+		border-radius: 50%;
+		max-height:64px;
+		height:64px;
+		width:auto;
 	}
 	
 	</style>
@@ -119,9 +146,18 @@
 		
 		<section class="main">
 			<h1>Pikethorne</h1>
-			<h3>Artist and Software Engineer</h3>
 			
 			<hr>
+			
+			<h3>Artist and Software Engineer</h3>
+			
+			<img class = "logoIcon" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AEYmBYRm6zahBjx3_gdRB8cgDzx9y8tslwhq93O7eHbyUJKyvJZoL62LY6EjCt8xv8VzIe71rzoTo8SG6HaMEK29ghp87Rs8VA=w1920-h919">
+			<section class = "socialsButtonBanner">
+				<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
+				<a href="https://twitter.com/pikethorn"><img src="Assets/SocialIcons/TwitterSocialIcon.svg"></a>
+				<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
+				<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
+			</section>
 			
 			<h2>Profile</h2>
 			<p>Florida-born, Illinois-based independent artist and game developer. Commissioned art available in traditional ink/watercolor or digital pixel art.</p>
@@ -129,17 +165,13 @@
 			<hr>
 			
 			<h2>Art</h2>
+			<p></p>
 		</section>
 		
 		<section class="leftSpace"></section>
 		<section class="rightSpace"></section>
 		
-		<section class = "footer">
-			<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
-			<button type="button" onclick="OpenLink(TwitterLink)">TwitterLink</button>
-			<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
-			<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
-		</section>
+		<section class = "footer"></section>
 		
 	</div>
 </body>
