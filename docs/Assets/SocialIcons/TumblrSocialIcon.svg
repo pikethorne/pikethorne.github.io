@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg width="36mm" height="36mm" viewBox="0 0 36 36" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="MyGradient" gradientTransform="rotate(45)">
+      <stop offset="5%" stop-color="#68C"/>
+      <stop offset="95%" stop-color="#537"/>
+    </linearGradient>
+  </defs>
+  <style
+     type="text/css">
+	.tyumblar{fill: url(#MyGradient);}
+	</style>
+  <path
+     class="tyumblar"
+     d="M 0,0 V 35.99987 H 35.99987 V 0 Z m 15.989721,6.2047892 h 3.687631 v 6.0125528 h 4.294828 v 4.398181 h -4.294828 v 6.08645 c 0,1.821502 0.918263,2.458248 2.38435,2.458248 h 2.087728 v 4.635376 h -3.938778 c -3.55415,0 -6.190319,-1.821676 -6.190319,-6.190319 v -6.989755 h -3.228227 v -3.7915 c 3.55415,-0.918156 5.034717,-3.96843 5.197615,-6.6192338 z"
+     id="path2"/>
+</svg>

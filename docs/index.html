@@ -23,7 +23,7 @@
 		--bodyColor: #E0E0C0;
 		--headerColor: #E0D0A0;
 		--mainColor: #301822;
-		--socialsBannerColor: #200812;
+		--socialsBannerColor: #141012;
 		
 		--bgColor: #100812;
 	}
@@ -41,7 +41,7 @@
 		color: var(--headerColor);
 		font: 45px Garamond, Serif;
 		margin-top: 0px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
 	
 	h3
@@ -49,7 +49,7 @@
 		color: var(--headerColor);
 		font: 30px Garamond, Serif;
 		margin-top: 0px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
 	
 	hr
@@ -86,6 +86,7 @@
 	
 	.wrapper > .main
 	{
+		padding-top:15px;
 		grid-area: main;
 		background-color: var(--mainColor);
 		border-radius: 25px
@@ -120,7 +121,7 @@
 		height:256px;
 		width:auto;
 		border-radius: 50%;
-		margin: 15px;
+		padding: 15px;
 	}
 	
 	.socialsButtonBanner
@@ -133,6 +134,7 @@
 		max-height:64px;
 		height:64px;
 		width:auto;
+		padding:10px;
 	}
 	
 	</style>
@@ -153,10 +155,10 @@
 			
 			<img class = "logoIcon" src="https://lh3.googleusercontent.com/u/2/drive-viewer/AEYmBYRm6zahBjx3_gdRB8cgDzx9y8tslwhq93O7eHbyUJKyvJZoL62LY6EjCt8xv8VzIe71rzoTo8SG6HaMEK29ghp87Rs8VA=w1920-h919">
 			<section class = "socialsButtonBanner">
-				<button type="button" onclick="OpenLink(KofiLink)">KofiLink</button>
+				<a href="https://ko-fi.com/pikethorne"><img src="Assets/SocialIcons/KofiSocialIcon.svg"></a>
 				<a href="https://twitter.com/pikethorn"><img src="Assets/SocialIcons/TwitterSocialIcon.svg"></a>
-				<button type="button" onclick="OpenLink(TumblrLink)">TumblrLink</button>
-				<button type="button" onclick="OpenLink(BlueSkyLink)">BlueSkyLink</button>
+				<a href="https://pikethorne.tumblr.com"><img src="Assets/SocialIcons/TumblrSocialIcon.svg"></a>
+				<a href="https://bsky.app/profile/pikethorne.bsky.social"><img src="Assets/SocialIcons/BskySocialIcon.svg"></a>
 			</section>
 			
 			<h2>Profile</h2>

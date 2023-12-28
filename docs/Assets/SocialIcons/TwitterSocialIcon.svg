@@ -5,7 +5,7 @@
 <defs>
 	<linearGradient id="MyGradient" gradientTransform="rotate(45)">
 	  <stop offset="5%" stop-color="#0FF" />
-	  <stop offset="95%" stop-color="#65A" />
+	  <stop offset="95%" stop-color="#56A" />
 	</linearGradient>
 </defs>
 <style type="text/css">
