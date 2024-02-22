@@ -107,12 +107,12 @@
 		flex-shrink: 0;
 	}
 	
-	.logoIcon
+	.artSample
 	{
 		image-rendering: pixelated;
-		height:256px;
+		height:203px;
 		width:auto;
-		border-radius: 50%;
+		border-radius: 10%;
 		padding: 15px;
 	}
 	
@@ -173,6 +173,11 @@
 	}
 	
 	</style>
+	
+	
+	<script src="DrivePrefix.js"></script>
+	<script src="8BitIDs.js"></script>
+	
 </head>
 
 <body>
@@ -183,10 +188,7 @@
 		
 		<section class="main">
 			
-		<h1>Card Gallery</h1>
-		<p>
-		<a href="ArtGallery/CardGallery8Bit.html">8 Bit</a>
-		</p>
+		<div id="Art">Images will only load if JavaScript is enabled.</div>
 			
 		</section>
 		
@@ -194,6 +196,19 @@
 		<section class="rightSpace"></section>
 		
 		<section class = "footer"></section>
+		
+		<script>
+		var finalString = ''
+		
+		function appendImage(item, index)
+		{
+			finalString += '<img class = "artSample" src="' + GDPrefix + item +'">';
+		}
+		
+		EightBitIDs.forEach(appendImage);
+	
+		document.getElementById('Art').innerHTML = finalString;
+		</script>
 		
 	</div>
 </body>

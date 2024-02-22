@@ -1,0 +1,1 @@
+var GDPrefix = 'https://drive.google.com/thumbnail?id=';
