@@ -11,7 +11,7 @@
 	:root{
 		--bodyColor: #E0E0C0;
 		--headerColor: #E0D0A0;
-		--socialsBannerColor: #140206;
+		--controlsBannerColor: #140206;
 		
 		--bgColor: #350810;
 	}
@@ -48,6 +48,11 @@
 		max-width: 20%;
 	}
 	
+	h3 + hr
+	{
+		max-width: 10%;
+	}
+	
 	body
 	{		
 		color: var(--bodyColor);
@@ -58,6 +63,23 @@
 		background-attachment: fixed;
 		text-align: center;
 		font: 20px Verdana, Sans-Serif;
+	}
+	
+	.controlsBanner
+	{
+		text-align: left;
+		background-image: linear-gradient(90deg, var(--controlsBannerColor), black, var(--controlsBannerColor));
+		border-radius: 0px 15px 15px 0px;
+		text-align: center;
+		max-width: 72px;
+	}
+	
+	.controlsBanner > a > img {
+		border-radius: 25%;
+		max-height:48px;
+		height:64px;
+		width:auto;
+		padding:10px;
 	}
 	
 	.wrapper
@@ -109,24 +131,32 @@
 	
 	.artSample
 	{
-		image-rendering: pixelated;
-		height:203px;
+		image-rendering: crisp-edges;
+		height:406px;
 		width:auto;
-		border-radius: 10%;
+		border-radius: 0.3in;
 		padding: 15px;
 	}
 	
-	.socialsButtonBanner
+	.artSampleHuge
 	{
-		background-image: linear-gradient(90deg, var(--socialsBannerColor), black, var(--socialsBannerColor));
+		image-rendering: crisp-edges;
+		height:580px;
+		width:auto;
+		border-radius: 0.3in;
+		padding: 15px;
 	}
 	
-	.socialsButtonBanner > a > img {
-		border-radius: 50%;
-		max-height:64px;
-		height:64px;
+	.artSamplePano
+	{
+		image-rendering: crisp-edges;
+		height:406px;
 		width:auto;
-		padding:10px;
+		border-radius: 0.3in;
+		padding-top: 15px;
+		padding-right: 3px;
+		padding-bottom: 15px;
+		padding-left: 3px;
 	}
 	
 	.main > p > a {
@@ -150,12 +180,6 @@
 			font: 25px Garamond, Serif;
 		}
 		
-		.socialsButtonBanner > a > img
-		{
-			height: 48px;
-			padding:5px;
-		}
-		
 		.logoIcon
 		{
 			height: 128px;
@@ -170,6 +194,43 @@
 		p > br {
 			margin-bottom: 1em;
 		}
+		
+		.controlsBanner > a > img
+		{
+			height: 32px;
+			padding:5px;
+		}
+		
+		.artSample
+		{
+			image-rendering: crisp-edges;
+			height:203px;
+			width:auto;
+			border-radius: 0.2in;
+			padding: 15px;
+		}
+		
+		.artSamplePano
+		{
+			image-rendering: crisp-edges;
+			height:203px;
+			width:auto;
+			border-radius: 0.2in;
+			padding-top: 15px;
+			padding-right: 2px;
+			padding-bottom: 15px;
+			padding-left: 2px;
+		}
+		
+		.artSampleHuge
+		{
+			image-rendering: crisp-edges;
+			height:290px;
+			width:auto;
+			border-radius: 0.3in;
+			padding: 15px;
+		}
+
 	}
 	
 	</style>
@@ -188,21 +249,50 @@
 		
 		<section class="main">
 			
+		<h1> 8-Bit (NES) Style </h1>
+			
+		<p> Pieces in this gallery are dated with time of original creation </p>
+			
+		<h2> Collections </h2>
+		<hr>
+		
+		<p> Pieces in this subgallery combine with other pieces to form a larger piece. </p>
+		
+		<h3> Brisela </h3>
+		<hr>
+		<div id="Brisela">Images will only load if JavaScript is enabled.</div>
+			
+		<h2> Standalone Pieces </h2>
+		<hr>
+		
 		<div id="Art">Images will only load if JavaScript is enabled.</div>
 			
 		</section>
 		
-		<section class="leftSpace"></section>
+		<section class="leftSpace">
+			<section class = "controlsBanner">
+				<a href="../index.html"><img src="../Assets/Icons/HomeIcon.svg"></a>
+				<a href="../CardGalleryLanding.html"><img src="../Assets/Icons/BackIcon.svg"></a>
+			</section>
+		</section>
 		<section class="rightSpace"></section>
 		
 		<section class = "footer"></section>
 		
 		<script>
-		var finalString = ''
+		var BriselaString = '';
+		
+		BriselaString += CreateImageTagFromID(BriselaIDs[0], 'artSamplePano');
+		BriselaString += CreateImageTagFromID(BriselaIDs[1], 'artSamplePano');
+		BriselaString += '<img class="artSampleHuge" src="Img/brisela.png">'
+		
+		document.getElementById('Brisela').innerHTML = BriselaString;
+		
+		var finalString = '';
 		
 		function appendImage(item, index)
 		{
-			finalString += '<img class = "artSample" src="' + GDPrefix + item +'">';
+			finalString += CreateImageTagFromID(item, 'artSample');
 		}
 		
 		EightBitIDs.forEach(appendImage);

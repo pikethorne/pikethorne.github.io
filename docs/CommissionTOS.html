@@ -11,7 +11,7 @@
 	:root{
 		--bodyColor: #E0E0C0;
 		--headerColor: #E0D0A0;
-		--socialsBannerColor: #140206;
+		--controlsBannerColor: #140206;
 		
 		--bgColor: #350810;
 	}
@@ -46,6 +46,19 @@
 		border-color: #FFB050;
 		border-width: 3px;
 		max-width: 20%;
+	}
+	
+	.controlsBanner
+	{
+		background-image: linear-gradient(90deg, var(--socialsBannerColor), black, var(--socialsBannerColor));
+	}
+	
+	.controlsBanner > a > img {
+		border-radius: 25%;
+		max-height:64px;
+		height:64px;
+		width:auto;
+		padding:10px;
 	}
 	
 	body
@@ -145,7 +158,7 @@
 			font: 25px Garamond, Serif;
 		}
 		
-		.socialsButtonBanner > a > img
+		.controlsBanner > a > img
 		{
 			height: 48px;
 			padding:5px;
@@ -174,9 +187,14 @@
 	
 	<div class="wrapper">
 		
-		<section class = "header"></section>
+		<section class = "header">
+		</section>
 		
 		<section class="main">
+		
+			<section class = "controlsBanner">
+					<a href="index.html"><img src="Assets/Icons/HomeIcon.svg"></a>
+			</section>
 			
 			<h1>TERMS OF SERVICE</h1>
 			
@@ -220,12 +238,16 @@
 			<h2 class="Pink">Refunds and Cancellations</h2>
 			<p class="Pink">			◇ The commissioner may request a cancellation at any point. Upon cancellation, a refund may be provided given current state of the piece.<br>			◇ If the commissioner requests a refund before any work has begun on the commissioned piece, they receive a full refund.<br>			◇ If the commissioner requests a cancellation before or in response to the initial sketch, the commissioner will receive a 95% refund.<br>			◇ After the initial sketch is approved, any cancellation before the delivery of the cleanup will allow the commissioner a 50% refund.<br>			◇ If the commissioner requests a cancellation at any point after cleanup, no refund will be provided.<br>			◇ Pikethorne reserves the right to cancel work on any commissioned piece for any reason. If Pikethorne issues a cancellation, a 95% refund will be issued.<br>			◇ Pikethorne holds the distribution rights to the art as described above, including for cancelled works, and may repurpose the sketch for a cancelled piece to create a different work without the copyrighted material owned by the commissioner.<br>
 			</p>
+			<section class = "controlsBanner">
+					<a href="index.html"><img src="Assets/Icons/HomeIcon.svg"></a>
+			</section>
 		</section>
 		
 		<section class="leftSpace"></section>
 		<section class="rightSpace"></section>
 		
-		<section class = "footer"></section>
+		<section class = "footer">
+		</section>
 		
 	</div>
 </body>

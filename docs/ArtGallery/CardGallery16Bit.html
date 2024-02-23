@@ -48,6 +48,11 @@
 		max-width: 20%;
 	}
 	
+	h3 + hr
+	{
+		max-width: 10%;
+	}
+	
 	body
 	{		
 		color: var(--bodyColor);
@@ -124,13 +129,25 @@
 		flex-shrink: 0;
 	}
 	
-	.logoIcon
+	.artSample
 	{
-		image-rendering: pixelated;
-		height:256px;
+		image-rendering: crisp-edges;
+		height:514px;
 		width:auto;
-		border-radius: 50%;
-		padding: 15px;
+		border-radius: 0.3in;
+		padding: 5px;
+	}
+	
+	.artSamplePano
+	{
+		image-rendering: crisp-edges;
+		height:514px;
+		width:auto;
+		border-radius: 0.3in;
+		padding-top: 15px;
+		padding-right: 3px;
+		padding-bottom: 15px;
+		padding-left: 3px;
 	}
 	
 	.main > p > a {
@@ -154,12 +171,6 @@
 			font: 25px Garamond, Serif;
 		}
 		
-		.controlsBanner > a > img
-		{
-			height: 32px;
-			padding:5px;
-		}
-		
 		.logoIcon
 		{
 			height: 128px;
@@ -174,41 +185,110 @@
 		p > br {
 			margin-bottom: 1em;
 		}
+		
+		.controlsBanner > a > img
+		{
+			height: 32px;
+			padding:5px;
+		}
+		
+		.artSample
+		{
+			image-rendering: crisp-edges;
+			height:252px;
+			width:auto;
+			border-radius: 0.2in;
+			padding: 0px;
+		}
+		
+		.artSamplePano
+		{
+			image-rendering: crisp-edges;
+			height:252px;
+			width:auto;
+			border-radius: 0.2in;
+			padding: 0px;
+		}
+
 	}
 	
 	</style>
+	
+	
+	<script src="DrivePrefix.js"></script>
+	<script src="16BitIDs.js"></script>
+	
 </head>
 
 <body>
 	
 	<div class="wrapper">
 		
-		<section class = "header">
-		</section>
+		<section class = "header"></section>
 		
 		<section class="main">
 			
-		
+		<h1> 8-Bit (NES) Style </h1>
 			
-		<h1>Card Gallery</h1>
-		<p>
-		<a href="ArtGallery/CardGallery8Bit.html">8 Bit</a>
-		</p>
+		<p> Pieces in this gallery are dated with time of original creation </p>
+			
+		<h2> Collections </h2>
+		<hr>
 		
-		<p>		
-		<a href="ArtGallery/CardGallery16Bit.html">16 Bit</a>
-		</p>		
+		<p> Pieces in this subgallery combine with other pieces to form a larger piece. </p>
 		
+		<h3> Kor Girls </h3>
+		<hr>
+		<div id="KorGirls">Images will only load if JavaScript is enabled.</div>
+		
+		<h3> Moon Sage </h3>
+		<hr>
+		<div id="Tami">Images will only load if JavaScript is enabled.</div>
+			
+		<h2> Standalone Pieces </h2>
+		<hr>
+		
+		<div id="Art">Images will only load if JavaScript is enabled.</div>
+			
 		</section>
 		
 		<section class="leftSpace">
 			<section class = "controlsBanner">
-				<a href="index.html"><img src="Assets/Icons/HomeIcon.svg"></a>
+				<a href="../index.html"><img src="../Assets/Icons/HomeIcon.svg"></a>
+				<a href="../CardGalleryLanding.html"><img src="../Assets/Icons/BackIcon.svg"></a>
 			</section>
 		</section>
 		<section class="rightSpace"></section>
 		
 		<section class = "footer"></section>
+		
+		<script>
+		
+		var KorString = '';
+		
+		KorString += CreateImageTagFromString('Img/16bit/Static/' + KorGirlIDs[0] + '.png', 'artSamplePano');
+		KorString += CreateImageTagFromString('Img/16bit/Static/' + KorGirlIDs[1] + '.png', 'artSamplePano');
+		
+		document.getElementById('KorGirls').innerHTML = KorString;
+		
+		var TamiString = '';
+		
+		TamiString += CreateImageTagFromString('Img/16bit/Static/' + Tamiyos[0] + '.png', 'artSamplePano');
+		TamiString += CreateImageTagFromString('Img/16bit/Static/' + Tamiyos[1] + '.png', 'artSamplePano');
+		
+		document.getElementById('Tami').innerHTML = TamiString;
+		
+		var finalString = '';
+		
+		function appendImage(item, index)
+		{
+			finalString += CreateImageTagFromString('Img/16bit/Static/' + item + '.png', 'artSample');
+		}
+		
+		SixteenBitIDs.forEach(appendImage);
+	
+		document.getElementById('Art').innerHTML = finalString;
+		</script>
 		
 	</div>
 </body>

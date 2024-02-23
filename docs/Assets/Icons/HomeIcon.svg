@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="White"
+   x="0px"
+   y="0px"
+   viewBox="0 0 400 400"
+   style="enable-background:new 0 0 400 400;"
+   xml:space="preserve"
+   sodipodi:docname="HomeIcon.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview2"
+   pagecolor="#505050"
+   bordercolor="#ffffff"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="1"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="1.4371945"
+   inkscape:cx="179.16851"
+   inkscape:cy="206.30471"
+   inkscape:window-width="1920"
+   inkscape:window-height="1009"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="White" />
+<defs
+   id="defs2">
+	<linearGradient
+   id="MyGradient"
+   gradientTransform="rotate(45)">
+	  <stop
+   offset="5%"
+   stop-color="#0FF"
+   id="stop1"
+   style="stop-color:#ffffff;stop-opacity:1" />
+	  <stop
+   offset="95%"
+   stop-color="#56A"
+   id="stop2"
+   style="stop-color:#d7d7f4;stop-opacity:1" />
+	</linearGradient>
+</defs>
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill: url(#MyGradient);}
+</style>
+<path
+   id="path2"
+   class="st0"
+   d="M 0 0 L 0 400 L 400 400 L 400 0 L 0 0 z M 198.99805 55.441406 C 202.73309 55.441406 206.46811 56.872394 209.33008 59.734375 L 348.07617 198.48047 C 353.37715 203.78144 353.70501 212.04346 349.1875 217.78711 L 299.89062 217.78711 L 299.89062 313.11133 C 299.89063 330.84304 285.61451 345.11719 267.88281 345.11719 L 251.86328 345.11719 C 251.86508 345.01278 251.87891 344.91151 251.87891 344.80664 L 251.87891 270.2832 C 251.87891 260.85927 244.29307 253.27148 234.86914 253.27148 L 199.31055 253.27148 C 189.88662 253.27148 182.29883 260.85927 182.29883 270.2832 L 182.29883 344.80664 C 182.29883 344.91151 182.31245 345.01279 182.31445 345.11719 L 131.50586 345.11719 C 113.77414 345.11719 99.5 330.84304 99.5 313.11133 L 99.5 217.78711 L 48.810547 217.78711 C 44.293035 212.04346 44.620896 203.78144 49.921875 198.48047 L 188.66602 59.734375 C 191.52799 56.872394 195.26301 55.441406 198.99805 55.441406 z " />
+</svg>
