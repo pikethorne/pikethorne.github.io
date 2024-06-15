@@ -5,6 +5,7 @@ var HiBitIDs = [
 'greased', // 
 'inked', // 
 'svyelun', // 
+'roxanne', //
 'copy', // 
 'insect', // 
 'secondsun' // 
