@@ -129,15 +129,6 @@
 		padding: 15px;
 	}
 	
-	.attentionGrabber
-	{
-		image-rendering: pixelated;
-		height:128px;
-		width:auto;
-		border-radius: 50%;
-		padding: 15px;
-	}
-	
 	.socialsButtonBanner
 	{
 		background-image: linear-gradient(90deg, var(--socialsBannerColor), black, var(--socialsBannerColor));
@@ -151,25 +142,88 @@
 		padding:10px;
 	}
 	
-	.main > p > a {
+	a {
 		color: #D80;
+	}
+	
+	.main > .profile {
+		display: inline-flex;
+		flex-direction: row;
+	}
+	
+	.profile > section {
+		align-content: center;
+	}
+	
+	.navigation
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding-left: 128px;
+	}
+	
+	.navigation > a 
+	{
+		display: flex;
+		width: 35%;
+		padding: 1% 128px 1% 0;
+	}
+	
+	.navigation > a > img {
+		image-rendering: pixelated;
+		max-height:128px;
+		max-width:128px;
+		height:128px;
+		width:auto;
+		padding: 0 5% 0 0;
+	}
+	
+	.navigation > a > span {
+		color: #D80;
+		text-decoration: none;
+		font-size: 1.5em;
+		font-family: Lucida Console, Lucida Sans Typewriter, monospace;
+		text-align: left;
+		align-content: center;
+	}
+	
+	.navigation > a > span:hover
+	{
+		color: #FA2;
+	}
+	
+	a:hover
+	{
+		color: #FA2;
+	}
+	
+	a:link 
+	{
+		text-decoration: none;
+	}
+
+	a:visited 
+	{
+	  text-decoration: none;
 	}
 	
 	@media screen and (max-width: 700px)
 	{
-		.main > h1 
+		h1 
 		{
-			font: 40px Georgia, Serif;
+			font: 30px Georgia, Serif;
 		}
 		
-		.main > h2 
-		{
-			font: 35px Garamond, Serif;
-		}
-		
-		.main > h3
+		h2 
 		{
 			font: 25px Garamond, Serif;
+		}
+		
+		h3
+		{
+			font: 20px Garamond, Serif;
 		}
 		
 		.socialsButtonBanner > a > img
@@ -184,9 +238,39 @@
 			padding: 5px;
 		}
 		
+		.navigation
+		{
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 5%;
+		}
+		
+		.navigation > a
+		{
+			justify-content: left;
+			padding: 1% 0 1% 0;
+		}
+		
+		.navigation > a > img 
+		{
+			image-rendering: pixelated;
+			max-height:64px;
+			height:64px;
+			width:auto;
+		}
+		
+		.navigation > a > span
+		{
+			max-width:10%;
+		}
+		
 		.main
 		{
 			font: 15px Verdana, Sans-Serif;
+		}
+		
+		.main > .profile {
+			display: inline;
 		}
 		
 		p > br {
@@ -204,16 +288,6 @@
 		<section class = "header"></section>
 		
 		<section class="main">
-			<h1>Pikethorne</h1>
-			
-			<hr>
-			
-			<h3>Artist and Game Dev</h3>
-			
-			<section>
-			<img class = "logoIcon" src="https://drive.google.com/thumbnail?id=1sSzSqhlHM5G5abL5N0-qmylKqQfCo_Gb">
-			<a href="ArtGallery/CardGallery8Bit.html"><img class = "attentionGrabber" src="Assets/Icons/cardsattentionicon.png"></a>
-			</section>
 			
 			<section class = "socialsButtonBanner">
 				<a href="https://ko-fi.com/pikethorne"><img src="Assets/SocialIcons/KofiSocialIcon.svg"></a>
@@ -222,32 +296,40 @@
 				<a href="https://bsky.app/profile/pikethorne.bsky.social"><img src="Assets/SocialIcons/BskySocialIcon.svg"></a>
 			</section>
 			
-			<h2>Profile</h2>
-			<p>Florida-born, Illinois-based independent artist and game developer. <br>
-			Professional software engineer since 2019, games industry since 2022. <br>
-			Hobby digital artist, pixel art and illustrations, as well as traditional watercolor painting. <br>
-			For	commissions and other inquiries, contact at <a href="mailto:pkx1x3@gmail.com">pkx1x3@gmail.com</a></p>
+			<section class="profile">
 			
-			<h2>Art</h2>
+				<img class = "logoIcon" src="https://drive.google.com/thumbnail?id=1sSzSqhlHM5G5abL5N0-qmylKqQfCo_Gb">
 			
-			<h3>Trading Cards</h3>
+				<section>
 			
-			<p><a href="CardGalleryLanding.html">Click here to enter the card gallery.</a></p>
+					<h1>Pikethorne.net</h1>
+					
+					<hr>
+					
+					<p>For	commissions and other inquiries, please read my <a href="CommissionTOS.html">Terms of Service</a> and contact at <a href="mailto:plummachado97@gmail.com">plummachado97@gmail.com</a></p>
+
+				</section>
+
+			</section>
 			
-			<p>*By accessing the digital gallery you agree to not repurpose these designs without permission or to sell physical versions of the featured pieces.</p>
+			<section class="navigation">
+				
+				<a href="CardGalleryLanding.html"><img src="Assets/Icons/CardGalleryIcon.gif"><span>Card Gallery</span></a>
+				
+				<a href="ArtGalleryLanding.html"><img src="Assets/Icons/ArtGalleryIcon.gif"><span>Art Gallery</span></a>
+				
+				<a href="ExperimentsLanding.html"><img src="Assets/Icons/ExperimentsIcon.gif"><span>Experiments</span></a>
+				
+				<a href="About.html"><img src="Assets/Icons/AboutIcon.gif"><span>About</span></a>
 			
-			<hr>
-			
-			<h3>Commissions</h3>
-			
-			<p> Parties interested in filing commission requests should first reference the <a href="CommissionTOS.html">Terms of Service.</a> </p>
-			
-			<hr>
+			</section>
 			
 		</section>
-		
+
 		<section class="leftSpace"></section>
-		<section class="rightSpace"></section>
+		
+		<section class="rightSpace">
+		</section>
 		
 		<section class = "footer"></section>
 		
