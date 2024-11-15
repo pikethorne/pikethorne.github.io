@@ -3,6 +3,7 @@
 var SixteenBitIDs = [
 'demonictutor', // demonic tutor
 'vampirtutor', // vampiric tutor
+'thoughtseize', // thoughtseize
 'blindobedience', // blind obedience
 'ragavan', // ragavan
 'Gahiji', // gahiji
