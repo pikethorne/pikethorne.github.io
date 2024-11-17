@@ -136,6 +136,60 @@
 	.main > p > a {
 		color: #D80;
 	}
+
+	.navigation
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding-left: 128px;
+	}
+	
+	.navigation > a 
+	{
+		display: flex;
+		width: 50%;
+		padding: 1% 128px 1% 0;
+	}
+	
+	.navigation > a > img {
+		image-rendering: pixelated;
+		max-height:128px;
+		max-width:128px;
+		height:128px;
+		width:auto;
+		padding: 0 5% 0 0;
+	}
+	
+	.navigation > a > span {
+		color: #D80;
+		text-decoration: none;
+		font-size: 1.5em;
+		font-family: Lucida Console, Lucida Sans Typewriter, monospace;
+		text-align: left;
+		align-content: center;
+	}
+	
+	.navigation > a > span:hover
+	{
+		color: #FA2;
+	}
+	
+	a:hover
+	{
+		color: #FA2;
+	}
+	
+	a:link 
+	{
+		text-decoration: none;
+	}
+
+	a:visited 
+	{
+	  text-decoration: none;
+	}
 	
 	@media screen and (max-width: 700px)
 	{
@@ -165,6 +219,29 @@
 			height: 128px;
 			padding: 5px;
 		}
+
+		.navigation
+		{
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 5%;
+		}
+		
+		.navigation > a
+		{
+			justify-content: left;
+			padding: 1% 0 1% 0;
+			width: 100%;
+		}
+		
+		.navigation > a > img 
+		{
+			image-rendering: pixelated;
+			max-height:128px;
+			height:128px;
+			width:auto;
+		}
+		
 		
 		.main
 		{
@@ -188,30 +265,25 @@
 		
 		<section class="main">
 			
-		
+			<h1>Card Gallery</h1>
+
+			<section class="navigation">
+
+			<a href="ArtGallery/CardGallery8Bit.html"><img src="Assets/Icons/Cards/8bit.png"><span>8 Bit<br>(NES Style)</span></a>
+
+			<a href="ArtGallery/CardGallery16Bit.html"><img src="Assets/Icons/Cards/16bit.png"><span>16 Bit<br>(SNES Style)</span></a>
+
+			<a href="ArtGallery/CardGalleryHiBit.html"><img src="Assets/Icons/Cards/HiBit.png"><span>Hi Bit<br>("Arcade" Style/Anything Goes)</span></a>
+
+			<a href="ArtGallery/CardGalleryOther.html"><img src="Assets/Icons/Cards/HiBit.png"><span>Other<br>(Not Pixel Art)</span></a>
 			
-		<h1>Card Gallery</h1>
-		<p>
-		<a href="ArtGallery/CardGallery8Bit.html">8 Bit (NES Style)</a>
-		</p>
-		
-		<p>		
-		<a href="ArtGallery/CardGallery16Bit.html">16 Bit (SNES Style)</a>
-		</p>	
-
-		<p>		
-		<a href="ArtGallery/CardGalleryHiBit.html">Hi Bit ("Arcade" Style/Anything Goes)</a>
-		</p>
-
-		<p>		
-		<a href="ArtGallery/CardGalleryOther.html">Other (Not Pixel Art)</a>
-		</p>		
+			</section>
 		
 		</section>
 		
 		<section class="leftSpace">
 			<section class = "controlsBanner">
-				<a href="index.html"><img src="Assets/Icons/HomeIcon.svg"></a>
+				<a href="index.html"><img src="Assets/Icons/Navigation/HomeIcon.svg"></a>
 			</section>
 		</section>
 		<section class="rightSpace"></section>
